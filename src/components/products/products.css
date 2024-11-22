@@ -1,0 +1,21 @@
+.product-card{
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 15px;
+}
+
+.product-card img{
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.text-content{
+    padding: .4rem 1rem;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
