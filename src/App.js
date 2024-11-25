@@ -1,6 +1,8 @@
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Products from './components/products/Products';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
@@ -43,16 +45,19 @@ function App() {
 
   return (
     <>
-     <BrowserRouter>
+     <Router>
+          <Navbar handleSearchInput = {handleSearchTextChange}/>
        <Routes>
-          <Route />
+          <Route path='/' element = {<Products products = {filteredProducts}/>}/>
+          <Route path = "/about" element = {<About />}/>
+          <Route path = "/contact" element= {<Contact />}/>
        </Routes>
-     </BrowserRouter>
+     </Router>
       {/* <h1>Hello World</h1>
      <ComponentA />
      <UserList /> */}
-     <Navbar handleSearchInput = {handleSearchTextChange}/>
-     <Products products = {filteredProducts}/>
+
+     
     </>
   );
 }
