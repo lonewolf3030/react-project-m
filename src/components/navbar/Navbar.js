@@ -1,14 +1,15 @@
 import React from 'react';
 import "./navbar.css";
 import { IoSearchSharp } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = (props) => {
 
-  console.log(props.handleSearchInput)
+  console.log(props.handleSearchInput);
 
   return (
     <div className='nav'>
-        <img width={200} src = "https://purepng.com/public/uploads/large/amazon-logo-s3f.png" 
+        <img  width={100} src = "https://purepng.com/public/uploads/large/amazon-logo-s3f.png" 
         alt = "logo"/>
 
         <div className='search-bar'>
@@ -21,9 +22,9 @@ const Navbar = (props) => {
      
         
         <ul className='menu-items'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <NavLink to="/"><li>Home</li></NavLink>
+            <NavLink to="/about"><li>About</li></NavLink>
+            <NavLink to = "/contact"><li>Contact</li></NavLink>
         </ul>
 
 
